@@ -23,6 +23,7 @@ class NewOne extends StatelessWidget {
                     children: [
                       const SizedBox(
                         height: 30,
+                        width: double.infinity,
                       ),
                       const SizedBox(
                         height: 300,
@@ -41,6 +42,7 @@ class NewOne extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 250),
                 height: 200,
                 width: 200,
+                
                 decoration: const BoxDecoration(
                   color: Colors.blueAccent
                 ),

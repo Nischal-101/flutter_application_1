@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/earning.dart';
 import 'package:flutter_application_1/history.dart';
 import 'package:flutter_application_1/popUpKoooo.dart';
 import 'package:flutter_application_1/scrollCheck.dart';
@@ -205,11 +206,27 @@ class _MyHomePageState extends State<MyHomePage> {
               margin: const EdgeInsets.only(top: 30),
               child: ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return const NewOne();
+                  return const Earning();
                 }));
               }, child:const FaIcon(FontAwesomeIcons.cableCar),
               ),
-            )
+            ),
+
+
+          
+
+            // Container(
+
+            //   child: Row(
+            //     children: [
+            //       const Text("Rs 1500/day"),
+            //       Container(
+            //         height: 50,
+            //         width: 50,
+            //       )
+            //     ],
+            //   ),
+            // )
 
 
 
@@ -218,6 +235,8 @@ class _MyHomePageState extends State<MyHomePage> {
         
         
         ),
+
+        
       );    
     
   }
