@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/history.dart';
+import 'package:flutter_application_1/popUpKoooo.dart';
+import 'package:flutter_application_1/scrollCheck.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
    
     return Scaffold(
+      drawer: const Drawer(),
       
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -193,10 +197,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context, MaterialPageRoute(builder: (context){
                   return const History();
                 }));
-              }, child: const Text("History",
-              style: TextStyle(
-                color: Colors.black,
-              ),)),
+              }, child:const FaIcon(FontAwesomeIcons.cableCar),
+              ),
+            ),
+
+            Container(
+              margin: const EdgeInsets.only(top: 30),
+              child: ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return const NewOne();
+                }));
+              }, child:const FaIcon(FontAwesomeIcons.cableCar),
+              ),
             )
 
 
